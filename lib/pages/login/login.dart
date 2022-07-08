@@ -44,24 +44,29 @@ class Login extends StatelessWidget {
             ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 300),
               child: Row(
-                children: const [
+                children: [
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.only(top: 28, bottom: 12),
-                      child: GeneralButton(text: "Iniciar sesión"),
+                      padding: const EdgeInsets.only(top: 28, bottom: 12),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text("Iniciar sesión"),
+                      ),
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
             ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 300),
               child: Row(
-                children: const [
+                children: [
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.only(top: 12, bottom: 120),
-                      child: GeneralButton(text: "Continuar como invitado"),
+                      padding: const EdgeInsets.only(top: 12, bottom: 120),
+                      child: OutlinedButton(
+                          onPressed: () {},
+                          child: const Text("Continuar como invitado")),
                     ),
                   ),
                 ],
