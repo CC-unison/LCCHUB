@@ -12,6 +12,8 @@ class LoginPage extends StatelessWidget {
         child: Row(
           children: [
             const Expanded(child: Login()),
+            //*********************************** */
+            // Icono
             Expanded(
               child: Container(
                 decoration: BoxDecoration(border: Border.all()),

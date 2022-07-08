@@ -14,6 +14,8 @@ class Login extends StatelessWidget {
             child: ListView(
               shrinkWrap: true,
               children: [
+                //*********************************** */
+                // Logo de la parte superior
                 Center(
                   child: Container(
                     margin: const EdgeInsets.symmetric(vertical: 40),
@@ -34,6 +36,8 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
+                //*********************************** */
+                // Texto
                 const Center(
                   child: Padding(
                     padding: EdgeInsets.symmetric(vertical: 12),
@@ -46,9 +50,13 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
+                //*********************************** */
+                // Botones
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    //*********************************** */
+                    // Botón de inicio de sesión.
                     ConstrainedBox(
                       constraints: const BoxConstraints(maxWidth: 300),
                       child: Row(
@@ -62,6 +70,8 @@ class Login extends StatelessWidget {
                         ],
                       ),
                     ),
+                    //*********************************** */
+                    // Botón de invitado.
                     ConstrainedBox(
                       constraints: const BoxConstraints(maxWidth: 300),
                       child: Row(
@@ -76,6 +86,8 @@ class Login extends StatelessWidget {
                         ],
                       ),
                     ),
+                    //*********************************** */
+                    // Texto.
                     Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: const [
