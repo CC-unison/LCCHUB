@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lcchub/widgets/buttons/general_button.dart';
+import 'package:lcchub/widgets/buttons/primary_buttons.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -44,29 +45,25 @@ class Login extends StatelessWidget {
             ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 300),
               child: Row(
-                children: [
+                children: const [
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 28, bottom: 12),
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: const Text("Iniciar sesión"),
-                      ),
+                      padding: EdgeInsets.only(top: 28, bottom: 12),
+                      child: LoginButton(text: "Iniciar sesión"),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
             ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 300),
               child: Row(
-                children: [
+                children: const [
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 12, bottom: 120),
-                      child: OutlinedButton(
-                          onPressed: () {},
-                          child: const Text("Continuar como invitado")),
+                      padding: EdgeInsets.only(top: 12, bottom: 120),
+                      child:
+                          LoginButtonInvitado(text: "Continuar como invitado"),
                     ),
                   ),
                 ],
