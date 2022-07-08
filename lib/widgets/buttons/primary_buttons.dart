@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lcchub/widgets/text_styles/primary_texts.dart';
 
 class LoginButton extends StatelessWidget {
   final String text;
@@ -11,9 +12,8 @@ class LoginButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         primary: Colors.blue,
         padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
       ),
-      child: Text(text),
+      child: ButtonText(text),
     );
   }
 }
@@ -31,7 +31,7 @@ class LoginButtonInvitado extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
         textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
       ),
-      child: Text(text),
+      child: ButtonText(text),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lcchub/widgets/buttons/general_button.dart';
 import 'package:lcchub/widgets/buttons/primary_buttons.dart';
+import 'package:lcchub/widgets/text_styles/primary_texts.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -32,14 +33,10 @@ class Login extends StatelessWidget {
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 12),
-              child: Text(
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              child: HeaderText(
                 "Lic. en Ciencias de la Computación",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
               ),
             ),
             ConstrainedBox(
