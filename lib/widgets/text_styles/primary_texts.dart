@@ -7,13 +7,14 @@ class HeaderText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text!,
-        style: GoogleFonts.robotoCondensed(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-        ));
-    ;
+    return FittedBox(
+        fit: BoxFit.fitWidth,
+        child: Text(text!,
+            style: GoogleFonts.robotoCondensed(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            )));
   }
 }
 
