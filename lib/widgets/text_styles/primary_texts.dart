@@ -29,6 +29,5 @@ class ButtonText extends StatelessWidget {
           fontSize: 16,
           fontWeight: FontWeight.normal,
         ));
-    ;
   }
 }

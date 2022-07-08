@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lcchub/widgets/buttons/general_button.dart';
+import 'package:lcchub/widgets/buttons/primary_buttons.dart';
+import 'package:lcchub/widgets/text_styles/primary_texts.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -36,18 +37,11 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
-                //*********************************** */
-                // Texto
-                const Center(
+                Center(
                   child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 12),
-                    child: Text(
-                      "Lic. en Ciencias de la Computación",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 12, horizontal: 20),
+                    child: HeaderText("Lic. En Ciencias de la Computación"),
                   ),
                 ),
                 //*********************************** */
@@ -64,7 +58,7 @@ class Login extends StatelessWidget {
                           Expanded(
                             child: Padding(
                               padding: EdgeInsets.only(top: 68, bottom: 12),
-                              child: GeneralButton(text: "Iniciar sesión"),
+                              child: LoginButton(text: "Iniciar sesión"),
                             ),
                           ),
                         ],
@@ -79,7 +73,7 @@ class Login extends StatelessWidget {
                           Expanded(
                             child: Padding(
                               padding: EdgeInsets.only(top: 12, bottom: 64),
-                              child: GeneralButton(
+                              child: LoginButtonInvitado(
                                   text: "Continuar como invitado"),
                             ),
                           ),
