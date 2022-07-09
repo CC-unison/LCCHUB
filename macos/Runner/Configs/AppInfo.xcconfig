@@ -8,6 +8,7 @@
 PRODUCT_NAME = lcchub
 
 // The application's bundle identifier
+PRODUCT_BUNDLE_IDENTIFIER = com.unison.lcchub
 PRODUCT_BUNDLE_IDENTIFIER =com.unison.lcchub
 
 // The copyright displayed in application information
