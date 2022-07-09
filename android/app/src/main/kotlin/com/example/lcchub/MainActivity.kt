@@ -1,4 +1,4 @@
-package com.example.lcchub
+package com.unison.lcchub
 
 import io.flutter.embedding.android.FlutterActivity
 
