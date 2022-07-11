@@ -58,7 +58,7 @@ class Login extends StatelessWidget {
                           Expanded(
                             child: Padding(
                               padding: EdgeInsets.only(top: 68, bottom: 12),
-                              child: LoginButton(text: "Iniciar sesión"),
+                              child: LoginButton(),
                             ),
                           ),
                         ],
