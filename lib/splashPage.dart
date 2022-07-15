@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lcchub/pages/alumno/alumno_page.dart';
 import 'package:lcchub/pages/invitado/invitado_page.dart';
-import 'package:lcchub/pages/login/login.dart';
-import 'package:lcchub/pages/login/login_page.dart';
 import 'package:lcchub/responsive/responsive_layout.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
@@ -25,7 +23,7 @@ class _SplashPageState extends State<SplashPage> {
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-                builder: (BuildContext context) => ResponsiveLayout(
+                builder: (BuildContext context) => const ResponsiveLayout(
                     mobilBody: InvitadoPage(), webBody: InvitadoPage())));
       });
     } else {
@@ -35,7 +33,6 @@ class _SplashPageState extends State<SplashPage> {
               builder: (context) => ResponsiveLayout(
                   mobilBody: AlumnoPage(), webBody: AlumnoPage())));
     }
-    ;
   }
 
   @override
@@ -52,7 +49,7 @@ class _SplashPageState extends State<SplashPage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
@@ -67,7 +64,7 @@ class _SplashPageState extends State<SplashPage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Column(
-              children: [
+              children: const [
                 // Image.asset(
                 //   "lib/images/login_image.png",
                 //   height: 300.0,
@@ -84,14 +81,14 @@ class _SplashPageState extends State<SplashPage> {
                 ),
               ],
             ),
-            CircularProgressIndicator(
+            const CircularProgressIndicator(
               strokeWidth: 12,
               valueColor: AlwaysStoppedAnimation<Color>(
                 Color.fromARGB(255, 255, 255, 255),
               ),
             ),
             Column(
-              children: [
+              children: const [
                 Text("Powered by"),
                 Text("XD"),
                 //Image.asset("images/CodingSolved Logo.png"),

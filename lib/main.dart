@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lcchub/pages/login/login.dart';
-import 'package:lcchub/pages/login/login_page.dart';
-import 'package:lcchub/responsive/responsive_layout.dart';
 import 'package:lcchub/splashPage.dart';
 //import 'package:lcchub/pages/login/login_page.dart';
 
@@ -20,13 +17,7 @@ class MyApp extends StatelessWidget {
       title: "LCC-Hub",
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      home: SplashPage()
-      // home: const Scaffold(
-        // body: ResponsiveLayout(
-        //   mobilBody: Login(),
-        //   webBody: LoginPage(),
-      //   ),
-      // ),
+      home: SplashPage(),
     );
   }
 }
