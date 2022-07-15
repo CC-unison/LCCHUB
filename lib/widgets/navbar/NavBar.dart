@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lcchub/widgets/navbar/nav_bar_mobil.dart';
 import 'package:lcchub/widgets/navbar/nav_bar_web.dart';
+
+import '../../config/responsive.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({
@@ -8,6 +11,8 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const NavBarWeb();
+    return Responsive.isDesktop(context)
+        ? const NavBarWeb()
+        : const NavBarMobil();
   }
 }

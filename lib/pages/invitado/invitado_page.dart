@@ -4,6 +4,7 @@ import 'package:lcchub/config/size_config.dart';
 import 'package:lcchub/widgets/buttons/primary_buttons.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:lcchub/widgets/navbar/NavBar.dart';
+import 'package:lcchub/widgets/navbar/navigation_drawer.dart';
 
 import '../../widgets/cards/card.dart';
 
@@ -24,6 +25,9 @@ class _InvitadoPageState extends State<InvitadoPage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+      drawer: Responsive.isMobile(context) || Responsive.isTablet(context)
+          ? const NavigationDrawer()
+          : null,
       body: SingleChildScrollView(
         child: Column(children: [
           Container(

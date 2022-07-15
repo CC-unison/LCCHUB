@@ -14,10 +14,10 @@ class NavBarWeb extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const SizedBox(
-              height: 80,
-              width: 80,
-              child: Icon(Icons.verified_user, size: 30, color: Colors.white),
+            SizedBox(
+              height: 100,
+              width: 100,
+              child: Image.asset("images/logo.jpg"),
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
