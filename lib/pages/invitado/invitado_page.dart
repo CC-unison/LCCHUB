@@ -3,9 +3,9 @@ import 'package:lcchub/config/responsive.dart';
 import 'package:lcchub/config/size_config.dart';
 import 'package:lcchub/widgets/buttons/primary_buttons.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:lcchub/widgets/navbar/NavBar.dart';
 
 import '../../widgets/cards/card.dart';
-import '../../widgets/header/header.dart';
 
 class InvitadoPage extends StatefulWidget {
   const InvitadoPage({Key? key}) : super(key: key);
@@ -30,16 +30,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
             width: double.infinity,
             color: const Color.fromARGB(255, 26, 113, 184),
             child: Column(children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.verified_user, size: 20, color: Colors.white),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Header(),
-                ],
-              ),
+              const NavBar(),
               SizedBox(
                 height: SizeConfig.blockSizeVertical! * 5,
               ),
@@ -260,4 +251,3 @@ class _InvitadoPageState extends State<InvitadoPage> {
     );
   }
 }
-

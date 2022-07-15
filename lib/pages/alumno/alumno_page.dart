@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lcchub/pages/invitado/invitado_page.dart';
 //import '../../config/responsive.dart';
 import '../../config/size_config.dart';
 //import '../../widgets/cards/card.dart';
-//import '../../widgets/footer/footer.dart';
-import '../../widgets/header/header.dart';
+import 'package:lcchub/widgets/navbar/NavBar.dart';
 
 class AlumnoPage extends StatefulWidget {
   AlumnoPage({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _AlumnoPageState extends State<AlumnoPage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return const Scaffold(
-      body: Header(),
+      body: InvitadoPage(),
     );
   }
 }

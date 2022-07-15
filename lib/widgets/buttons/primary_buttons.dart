@@ -40,7 +40,11 @@ class _LoginButton extends State<LoginButton> {
       onPressed: (() {
         login();
       }),
-      icon: Icon(Icons.account_circle_rounded, color: Colors.white),
+      icon: const Icon(
+        Icons.account_circle_rounded,
+        color: Colors.white,
+        size: 30,
+      ),
     );
   }
 
