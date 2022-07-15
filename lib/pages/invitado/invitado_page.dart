@@ -5,6 +5,7 @@ import 'package:lcchub/widgets/buttons/primary_buttons.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import '../../widgets/cards/card.dart';
+import '../../widgets/header/header.dart';
 
 class InvitadoPage extends StatefulWidget {
   const InvitadoPage({Key? key}) : super(key: key);
@@ -31,50 +32,12 @@ class _InvitadoPageState extends State<InvitadoPage> {
             child: Column(children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.verified_user, size: 20, color: Colors.white),
-                  const SizedBox(
+                children: const [
+                  Icon(Icons.verified_user, size: 20, color: Colors.white),
+                  SizedBox(
                     width: 10,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: const [
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text("Programa",
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              decoration: TextDecoration.none)),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text("Alumnos",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              decoration: TextDecoration.none)),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text("Plan de estudios",
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              decoration: TextDecoration.none)),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text("Tésis",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              decoration: TextDecoration.none)),
-                      LoginButton(),
-                    ],
-                  ),
+                  Header(),
                 ],
               ),
               SizedBox(
@@ -297,3 +260,4 @@ class _InvitadoPageState extends State<InvitadoPage> {
     );
   }
 }
+
