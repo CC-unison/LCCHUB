@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lcchub/widgets/buttons/primary_buttons.dart';
-import 'package:lcchub/widgets/text_styles/primary_texts.dart';
+
+import '../../styles/text_styles/primary_texts.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);

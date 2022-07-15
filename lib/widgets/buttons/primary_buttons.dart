@@ -6,13 +6,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lcchub/main.dart';
 import 'package:lcchub/pages/alumno/alumno_page.dart';
-import 'package:lcchub/widgets/text_styles/primary_texts.dart';
 import 'package:aad_oauth/aad_oauth.dart';
 // import 'package:aad_oauth/';
 import 'package:http/http.dart' as http;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../../responsive/responsive_layout.dart';
+import '../../styles/text_styles/primary_texts.dart';
 
 final Config config = Config(
   tenant: '67553645-0db3-4480-b127-6f819a79e367',
