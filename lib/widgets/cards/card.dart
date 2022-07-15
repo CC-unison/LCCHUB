@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../config/size_config.dart';
+import '../../config/size_config.dart';
 
 class InfoCardTablero extends StatelessWidget {
   const InfoCardTablero({

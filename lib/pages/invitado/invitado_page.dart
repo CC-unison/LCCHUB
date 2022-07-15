@@ -4,7 +4,7 @@ import 'package:lcchub/config/size_config.dart';
 import 'package:lcchub/widgets/buttons/primary_buttons.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'components/card.dart';
+import '../../widgets/cards/card.dart';
 
 class InvitadoPage extends StatefulWidget {
   InvitadoPage({Key? key}) : super(key: key);
