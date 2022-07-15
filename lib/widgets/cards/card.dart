@@ -19,7 +19,7 @@ class InfoCardTablero extends StatelessWidget {
         children: [
           Expanded(
             child: Column(children: [
-              Icon(Icons.image, size: 80),
+              const Icon(Icons.image, size: 80),
               Expanded(
                   child: SizedBox(
                 width: double.infinity,
@@ -32,7 +32,7 @@ class InfoCardTablero extends StatelessWidget {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text("Title",
                               style: TextStyle(
                                   fontSize: 18,
@@ -49,7 +49,7 @@ class InfoCardTablero extends StatelessWidget {
                         height: SizeConfig.blockSizeVertical! * 2,
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Flexible(
                             child: Text(
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",

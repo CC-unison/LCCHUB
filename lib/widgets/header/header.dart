@@ -17,18 +17,18 @@ class Header extends StatelessWidget {
       child: Column(children: [
         Container(
           width: double.infinity,
-          color: Color.fromARGB(255, 26, 113, 184),
+          color: const Color.fromARGB(255, 26, 113, 184),
           child: Column(children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.verified_user, size: 20, color: Colors.white),
-                SizedBox(
+                const Icon(Icons.verified_user, size: 20, color: Colors.white),
+                const SizedBox(
                   width: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     SizedBox(
                       width: 10,
                     ),
@@ -73,7 +73,7 @@ class Header extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.only(left: SizeConfig.blockSizeVertical! * 5),
               child: Row(
-                children: [
+                children: const [
                   Text("Licienciatura en\nCiencias de la Computación",
                       textAlign: TextAlign.start,
                       style: TextStyle(
@@ -89,7 +89,7 @@ class Header extends StatelessWidget {
             if (Responsive.isDesktop(context))
               Wrap(
                 spacing: 20,
-                children: [
+                children: const [
                   InfoCardTablero(),
                   InfoCardTablero(),
                   InfoCardTablero(),
@@ -98,7 +98,7 @@ class Header extends StatelessWidget {
             if (Responsive.isTablet(context))
               Wrap(
                 spacing: 20,
-                children: [
+                children: const [
                   InfoCardTablero(),
                   InfoCardTablero(),
                 ],
@@ -106,7 +106,7 @@ class Header extends StatelessWidget {
             if (Responsive.isMobile(context))
               Wrap(
                 spacing: 20,
-                children: [
+                children: const [
                   InfoCardTablero(),
                 ],
               ),
@@ -126,18 +126,18 @@ class Header extends StatelessWidget {
         ),
         Container(
           width: double.infinity,
-          color: Color.fromARGB(255, 255, 255, 255),
+          color: const Color.fromARGB(255, 255, 255, 255),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             Column(
               children: [
                 Column(
                   children: [
-                    Text("Lorem Ipsum..."),
+                    const Text("Lorem Ipsum..."),
                     SizedBox(
                       height: SizeConfig.blockSizeVertical!,
                     ),
-                    Text(
+                    const Text(
                         "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
                   ],
                 ),
@@ -146,22 +146,23 @@ class Header extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Text("Lorem Ipsum..."),
+                    const Text("Lorem Ipsum..."),
                     SizedBox(
                       height: SizeConfig.blockSizeVertical!,
                     ),
-                    Text(
+                    const Text(
                         "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
                   ],
                 ),
-                if (Responsive.isMobile(context)) Icon(Icons.image, size: 60)
+                if (Responsive.isMobile(context))
+                  const Icon(Icons.image, size: 60)
               ],
             ),
             if (Responsive.isDesktop(context) || Responsive.isTablet(context))
-              Icon(Icons.image, size: 120)
+              const Icon(Icons.image, size: 120)
           ]),
         ),
-        Footer(),
+        const Footer(),
       ]),
     );
   }
