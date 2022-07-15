@@ -20,37 +20,23 @@ class Footer extends StatelessWidget {
             Column(children: [
               Column(
                 children: [
-                  Row(
-                    children: const [
-                      Icon(Icons.phone,
-                          color: Color.fromARGB(255, 105, 144, 235), size: 20),
-                      Text("Contacto",
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 105, 144, 235))),
-                    ],
+                  Container(
+                    margin: EdgeInsets.only(right: 60),
+                    child: Row(
+                      children: const [
+                        Icon(Icons.phone,
+                            color: Color.fromARGB(255, 105, 144, 235),
+                            size: 20),
+                        Text("Contacto",
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 105, 144, 235))),
+                      ],
+                    ),
                   ),
                   Row(
                     children: const [
-                      Text("Tel y Fax",
+                      Text("Tel y Fax\n(662) 259.2155\nExt: 2482 y 2494",
                           textAlign: TextAlign.left,
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 10)),
-                    ],
-                  ),
-                  Row(
-                    children: const [
-                      Text("(662) 259.2155",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 10)),
-                    ],
-                  ),
-                  Row(
-                    children: const [
-                      Text("Ext: 2482 y 2494",
-                          textAlign: TextAlign.end,
                           style: TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255),
                               fontSize: 10)),
