@@ -7,7 +7,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import '../../widgets/cards/card.dart';
 
 class InvitadoPage extends StatefulWidget {
-  InvitadoPage({Key? key}) : super(key: key);
+  const InvitadoPage({Key? key}) : super(key: key);
 
   @override
   _InvitadoPageState createState() => _InvitadoPageState();
@@ -27,18 +27,19 @@ class _InvitadoPageState extends State<InvitadoPage> {
         child: Column(children: [
           Container(
             width: double.infinity,
-            color: Color.fromARGB(255, 26, 113, 184),
+            color: const Color.fromARGB(255, 26, 113, 184),
             child: Column(children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.verified_user, size: 20, color: Colors.white),
-                  SizedBox(
+                  const Icon(Icons.verified_user, size: 20, color: Colors.white),
+                  const SizedBox(
                     width: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: const [
                       SizedBox(
                         width: 10,
                       ),
@@ -84,7 +85,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                 padding:
                     EdgeInsets.only(left: SizeConfig.blockSizeVertical! * 5),
                 child: Row(
-                  children: [
+                  children: const [
                     Text("Licienciatura en\nCiencias de la Computación",
                         textAlign: TextAlign.start,
                         style: TextStyle(
@@ -100,7 +101,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
               if (Responsive.isDesktop(context))
                 Wrap(
                   spacing: 20,
-                  children: [
+                  children: const [
                     InfoCardTablero(),
                     InfoCardTablero(),
                     InfoCardTablero(),
@@ -109,7 +110,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
               if (Responsive.isTablet(context))
                 Wrap(
                   spacing: 20,
-                  children: [
+                  children: const [
                     InfoCardTablero(),
                     InfoCardTablero(),
                   ],
@@ -117,7 +118,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
               if (Responsive.isMobile(context))
                 Wrap(
                   spacing: 20,
-                  children: [
+                  children: const [
                     InfoCardTablero(),
                   ],
                 ),
@@ -131,14 +132,14 @@ class _InvitadoPageState extends State<InvitadoPage> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15)),
                 child: Row(
-                  children: [],
+                  children: const [],
                 ),
               )
             ]),
           ),
           Container(
             width: double.infinity,
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: const Color.fromARGB(255, 255, 255, 255),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -146,11 +147,11 @@ class _InvitadoPageState extends State<InvitadoPage> {
                     children: [
                       Column(
                         children: [
-                          Text("Lorem Ipsum..."),
+                          const Text("Lorem Ipsum..."),
                           SizedBox(
                             height: SizeConfig.blockSizeVertical!,
                           ),
-                          Text(
+                          const Text(
                               "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
                         ],
                       ),
@@ -159,26 +160,26 @@ class _InvitadoPageState extends State<InvitadoPage> {
                       ),
                       Column(
                         children: [
-                          Text("Lorem Ipsum..."),
+                          const Text("Lorem Ipsum..."),
                           SizedBox(
                             height: SizeConfig.blockSizeVertical!,
                           ),
-                          Text(
+                          const Text(
                               "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
                         ],
                       ),
                       if (Responsive.isMobile(context))
-                        Icon(Icons.image, size: 60)
+                        const Icon(Icons.image, size: 60)
                     ],
                   ),
                   if (Responsive.isDesktop(context) ||
                       Responsive.isTablet(context))
-                    Icon(Icons.image, size: 120)
+                    const Icon(Icons.image, size: 120)
                 ]),
           ),
           Container(
             width: double.infinity,
-            color: Color.fromARGB(255, 31, 41, 55),
+            color: const Color.fromARGB(255, 31, 41, 55),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -186,7 +187,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                     Column(
                       children: [
                         Row(
-                          children: [
+                          children: const [
                             Icon(Icons.phone,
                                 color: Color.fromARGB(255, 105, 144, 235),
                                 size: 20),
@@ -197,7 +198,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Text("Tel y Fax",
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
@@ -206,7 +207,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Text("(662) 259.2155",
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
@@ -215,7 +216,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Text("Ext: 2482 y 2494",
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
@@ -224,7 +225,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Icon(Icons.wb_twilight_outlined,
                                 color: Color.fromARGB(255, 105, 144, 235),
                                 size: 40),
@@ -239,7 +240,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                   Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Icon(Icons.location_on,
                               color: Color.fromARGB(255, 105, 144, 235),
                               size: 20),
@@ -252,7 +253,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                               "Edificio 3K4, Ciencias\nde la computación,\nBoulevard Luis\nEncinas y Rosales s/n\n, Col.Centro,\n,Hermosillo,Sonora.\n. CP 83000",
                               textAlign: TextAlign.end,
@@ -266,7 +267,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                   Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Icon(Icons.mail,
                               color: Color.fromARGB(255, 105, 144, 235),
                               size: 20),
@@ -279,7 +280,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text("computacion@mat.uson.mx",
                               textAlign: TextAlign.end,
                               style: TextStyle(
