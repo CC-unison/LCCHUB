@@ -14,14 +14,14 @@ class Footer extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 45),
         child: Container(
-          margin: EdgeInsets.only(left: 100, right: 100),
+          margin: const EdgeInsets.only(left: 100, right: 100),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             Column(children: [
               Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(right: 60),
+                    margin: const EdgeInsets.only(right: 60),
                     child: Row(
                       children: const [
                         Icon(Icons.phone,
@@ -56,7 +56,7 @@ class Footer extends StatelessWidget {
             Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(right: 80),
+                  margin: const EdgeInsets.only(right: 80),
                   child: Row(
                     children: const [
                       Icon(Icons.location_on,
@@ -85,7 +85,7 @@ class Footer extends StatelessWidget {
             Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(right: 120),
+                  margin: const EdgeInsets.only(right: 120),
                   child: Row(
                     children: const [
                       Icon(Icons.mail,
