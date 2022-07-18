@@ -12,19 +12,7 @@ class Footer extends StatefulWidget {
 }
 
 class _FooterState extends State<Footer> {
-  late final List<FooterItem> _items = <FooterItem>[
-    FooterItem(
-        icon: Icons.phone,
-        header: "Contacto",
-        body: "Tel y Fax\n(662) 259.2155\nExt: 2482 y 2494"),
-    FooterItem(
-        icon: Icons.location_on,
-        header: "Dirección",
-        body:
-            "Edificio 3K4, Ciencias\nde la computación,\nBoulevard Luis\nEncinas y Rosales s/n,\nCol.Centro,\nHermosillo,Sonora.\n CP 83000"),
-    FooterItem(
-        icon: Icons.mail, header: "Correo", body: "computacion@mat.uson.mx"),
-  ];
+  //Elementos del footer
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,33 +24,83 @@ class _FooterState extends State<Footer> {
           children: [
             if (Responsive.isMobile(context) || Responsive.isTablet(context))
               //Lista de items para el footer
-              ExpansionPanelList(
-                expandedHeaderPadding: EdgeInsets.all(2),
-                dividerColor: Color.fromARGB(255, 105, 144, 235),
-                expansionCallback: (panelIndex, isExpanded) {
-                  setState(() {
-                    // Se cambia el valor de isExapanded.
-                    _items[panelIndex].isExpanded =
-                        !_items[panelIndex].isExpanded;
-                  });
-                },
-                // Se extraen los valores de la lista _items
-                children: _items.map((FooterItem item) {
-                  //  Cada uno de los paneles de expanisión.
-                  return ExpansionPanel(
-                    backgroundColor: const Color.fromARGB(255, 31, 41, 55),
-                    canTapOnHeader: true,
-                    headerBuilder: ((context, isExpanded) {
-                      return buildTile(item);
-                    }),
-                    body: Container(
-                      child: Text(item.body,
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 105, 144, 235))),
+              Container(
+                margin: const EdgeInsets.only(right: 100, left: 100),
+                child: Column(
+                  children: const [
+                    ExpansionTile(
+                      textColor: Color.fromARGB(255, 255, 255, 255),
+                      iconColor: Color.fromARGB(255, 255, 255, 255),
+                      leading: Icon(Icons.phone,
+                          color: Color.fromARGB(255, 105, 144, 235), size: 20),
+                      trailing: Icon(
+                        Icons.expand_more_outlined,
+                        color: Color.fromARGB(255, 105, 144, 235),
+                      ),
+                      title: Text(
+                        "Contacto",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 105, 144, 235)),
+                      ),
+                      children: [
+                        ListTile(
+                          contentPadding: EdgeInsets.only(left: 100),
+                          title: Text(
+                              "Tel y Fax\n(662) 259.2155\nExt: 2482 y 2494",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255))),
+                        ),
+                      ],
                     ),
-                    isExpanded: item.isExpanded,
-                  );
-                }).toList(),
+                    ExpansionTile(
+                      textColor: Color.fromARGB(255, 255, 255, 255),
+                      iconColor: Color.fromARGB(255, 255, 255, 255),
+                      leading: Icon(Icons.location_on,
+                          color: Color.fromARGB(255, 105, 144, 235), size: 20),
+                      trailing: Icon(
+                        Icons.expand_more_outlined,
+                        color: Color.fromARGB(255, 105, 144, 235),
+                      ),
+                      title: Text(
+                        "Dirección",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 105, 144, 235)),
+                      ),
+                      children: [
+                        ListTile(
+                          contentPadding: EdgeInsets.only(left: 100),
+                          title: Text(
+                              "Edificio 3K4, Ciencias\nde la computación,\nBoulevard Luis\nEncinas y Rosales s/n,\nCol.Centro,\nHermosillo,Sonora.\n CP 83000",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255))),
+                        ),
+                      ],
+                    ),
+                    ExpansionTile(
+                      textColor: Color.fromARGB(255, 255, 255, 255),
+                      iconColor: Color.fromARGB(255, 255, 255, 255),
+                      leading: Icon(Icons.mail,
+                          color: Color.fromARGB(255, 105, 144, 235), size: 20),
+                      trailing: Icon(
+                        Icons.expand_more_outlined,
+                        color: Color.fromARGB(255, 105, 144, 235),
+                      ),
+                      title: Text(
+                        "Correo",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 105, 144, 235)),
+                      ),
+                      children: [
+                        ListTile(
+                          contentPadding: EdgeInsets.only(left: 100),
+                          title: Text("computacion@mat.uson.mx",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255))),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               )
             else
               Padding(
@@ -185,28 +223,4 @@ class _FooterState extends State<Footer> {
       ),
     );
   }
-
-  ListTile buildTile(FooterItem item) {
-    return ListTile(
-      leading: Icon(
-        item.icon,
-        color: Color.fromARGB(255, 105, 144, 235),
-      ),
-      title: Text(item.header,
-          style: TextStyle(color: Color.fromARGB(255, 105, 144, 235))),
-    );
-  }
-}
-
-class FooterItem {
-  FooterItem(
-      {this.isExpanded = false,
-      required this.icon,
-      required this.header,
-      required this.body});
-
-  bool isExpanded;
-  final IconData icon;
-  final String header;
-  final String body;
 }
