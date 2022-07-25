@@ -16,7 +16,6 @@ class _FooterState extends State<Footer> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 200.0,
       color: const Color.fromARGB(255, 31, 41, 55),
       child: SingleChildScrollView(
         child: Column(
