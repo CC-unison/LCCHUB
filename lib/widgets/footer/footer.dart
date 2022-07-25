@@ -12,7 +12,6 @@ class Footer extends StatefulWidget {
 }
 
 class _FooterState extends State<Footer> {
-  //Elementos del footer
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,9 +22,9 @@ class _FooterState extends State<Footer> {
         child: Column(
           children: [
             if (Responsive.isMobile(context) || Responsive.isTablet(context))
-              FooterMobile()
+              const FooterMobile()
             else
-              FooterWeb(),
+              const FooterWeb(),
           ],
         ),
       ),
@@ -55,16 +54,14 @@ class FooterMobile extends StatelessWidget {
             ),
             title: Text(
               "Contacto",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 105, 144, 235)),
+              style: TextStyle(color: Color.fromARGB(255, 105, 144, 235)),
             ),
             children: [
               ListTile(
-                contentPadding: EdgeInsets.only(left: 100),
-                title: Text(
-                    "Tel y Fax\n(662) 259.2155\nExt: 2482 y 2494",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255))),
+                contentPadding: EdgeInsets.only(left: 30),
+                title: Text("Tel y Fax\n(662) 259.2155\nExt: 2482 y 2494",
+                    style:
+                        TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
               ),
             ],
           ),
@@ -79,16 +76,15 @@ class FooterMobile extends StatelessWidget {
             ),
             title: Text(
               "Dirección",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 105, 144, 235)),
+              style: TextStyle(color: Color.fromARGB(255, 105, 144, 235)),
             ),
             children: [
               ListTile(
-                contentPadding: EdgeInsets.only(left: 100),
+                contentPadding: EdgeInsets.only(left: 30),
                 title: Text(
-                    "Edificio 3K4, Ciencias\nde la computación,\nBoulevard Luis\nEncinas y Rosales s/n,\nCol.Centro,\nHermosillo,Sonora.\n CP 83000",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255))),
+                    "Edificio 3K4, Ciencias de la computación,\nBoulevard Luis Encinas y Rosales s/n,\nCol.Centro,\nHermosillo,Sonora. CP 83000",
+                    style:
+                        TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
               ),
             ],
           ),
@@ -103,15 +99,14 @@ class FooterMobile extends StatelessWidget {
             ),
             title: Text(
               "Correo",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 105, 144, 235)),
+              style: TextStyle(color: Color.fromARGB(255, 105, 144, 235)),
             ),
             children: [
               ListTile(
-                contentPadding: EdgeInsets.only(left: 100),
+                contentPadding: EdgeInsets.only(left: 30),
                 title: Text("computacion@mat.uson.mx",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255))),
+                    style:
+                        TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
               ),
             ],
           ),
@@ -132,115 +127,100 @@ class FooterWeb extends StatelessWidget {
       padding: const EdgeInsets.only(top: 45),
       child: Container(
         margin: const EdgeInsets.only(left: 100, right: 100),
-        child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(children: [
-                Column(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 60),
-                      child: Row(
-                        children: const [
-                          Icon(Icons.phone,
-                              color:
-                                  Color.fromARGB(255, 105, 144, 235),
-                              size: 20),
-                          Text("Contacto",
-                              style: TextStyle(
-                                  color: Color.fromARGB(
-                                      255, 105, 144, 235))),
-                        ],
-                      ),
-                    ),
-                    Row(
-                      children: const [
-                        Text(
-                            "Tel y Fax\n(662) 259.2155\nExt: 2482 y 2494",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                                color: Color.fromARGB(
-                                    255, 255, 255, 255),
-                                fontSize: 10)),
-                      ],
-                    ),
-                    Row(
-                      children: const [
-                        Icon(Icons.wb_twilight_outlined,
-                            color: Color.fromARGB(255, 105, 144, 235),
-                            size: 40),
-                        Icon(Icons.facebook,
-                            color: Color.fromARGB(255, 105, 144, 235),
-                            size: 40)
-                      ],
-                    ),
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          Column(children: [
+            Column(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(right: 60),
+                  child: Row(
+                    children: const [
+                      Icon(Icons.phone,
+                          color: Color.fromARGB(255, 105, 144, 235), size: 20),
+                      Text("Contacto",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 105, 144, 235))),
+                    ],
+                  ),
+                ),
+                Row(
+                  children: const [
+                    Text("Tel y Fax\n(662) 259.2155\nExt: 2482 y 2494",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 10)),
                   ],
-                )
-              ]),
-              Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(right: 80),
-                    child: Row(
-                      children: const [
-                        Icon(Icons.location_on,
-                            color: Color.fromARGB(255, 105, 144, 235),
-                            size: 20),
-                        Text("Dirección",
-                            textAlign: TextAlign.end,
-                            style: TextStyle(
-                                color: Color.fromARGB(
-                                    255, 105, 144, 235))),
-                      ],
-                    ),
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      Text(
-                          "Edificio 3K4, Ciencias\nde la computación,\nBoulevard Luis\nEncinas y Rosales s/n,\nCol.Centro,\nHermosillo,Sonora.\n CP 83000",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              color:
-                                  Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 10)),
-                    ],
-                  ),
+                ),
+                Row(
+                  children: const [
+                    Icon(Icons.wb_twilight_outlined,
+                        color: Color.fromARGB(255, 105, 144, 235), size: 40),
+                    Icon(Icons.facebook,
+                        color: Color.fromARGB(255, 105, 144, 235), size: 40)
+                  ],
+                ),
+              ],
+            )
+          ]),
+          Column(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(right: 80),
+                child: Row(
+                  children: const [
+                    Icon(Icons.location_on,
+                        color: Color.fromARGB(255, 105, 144, 235), size: 20),
+                    Text("Dirección",
+                        textAlign: TextAlign.end,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 105, 144, 235))),
+                  ],
+                ),
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Text(
+                      "Edificio 3K4, Ciencias\nde la computación,\nBoulevard Luis\nEncinas y Rosales s/n,\nCol.Centro,\nHermosillo,Sonora.\n CP 83000",
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 10)),
                 ],
               ),
-              Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(right: 120),
-                    child: Row(
-                      children: const [
-                        Icon(Icons.mail,
-                            color: Color.fromARGB(255, 105, 144, 235),
-                            size: 20),
-                        Text("Correo",
-                            textAlign: TextAlign.end,
-                            style: TextStyle(
-                                color: Color.fromARGB(
-                                    255, 105, 144, 235))),
-                      ],
-                    ),
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      Text("computacion@mat.uson.mx",
-                          textAlign: TextAlign.end,
-                          style: TextStyle(
-                              color:
-                                  Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 10)),
-                    ],
-                  ),
+            ],
+          ),
+          Column(
+            children: [
+              Container(
+                margin: const EdgeInsets.only(right: 120),
+                child: Row(
+                  children: const [
+                    Icon(Icons.mail,
+                        color: Color.fromARGB(255, 105, 144, 235), size: 20),
+                    Text("Correo",
+                        textAlign: TextAlign.end,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 105, 144, 235))),
+                  ],
+                ),
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Text("computacion@mat.uson.mx",
+                      textAlign: TextAlign.end,
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 10)),
                 ],
               ),
-            ]),
+            ],
+          ),
+        ]),
       ),
     );
   }
