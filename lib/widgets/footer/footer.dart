@@ -123,7 +123,7 @@ class FooterWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 45),
+      padding: const EdgeInsets.only(top: 45, bottom: 45),
       child: Container(
         margin: const EdgeInsets.only(left: 100, right: 100),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
