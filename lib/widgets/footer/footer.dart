@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../config/responsive.dart';
 
+import 'custom_expansion_tile.dart';
+
 class Footer extends StatefulWidget {
   const Footer({
     Key? key,
@@ -42,15 +44,11 @@ class FooterMobile extends StatelessWidget {
       margin: const EdgeInsets.only(right: 100, left: 100),
       child: Column(
         children: const [
-          ExpansionTile(
+          CustomExpansionTile(
             textColor: Color.fromARGB(255, 255, 255, 255),
             iconColor: Color.fromARGB(255, 255, 255, 255),
             leading: Icon(Icons.phone,
                 color: Color.fromARGB(255, 105, 144, 235), size: 20),
-            trailing: Icon(
-              Icons.expand_more_outlined,
-              color: Color.fromARGB(255, 105, 144, 235),
-            ),
             title: Text(
               "Contacto",
               style: TextStyle(color: Color.fromARGB(255, 105, 144, 235)),
@@ -64,15 +62,11 @@ class FooterMobile extends StatelessWidget {
               ),
             ],
           ),
-          ExpansionTile(
+          CustomExpansionTile(
             textColor: Color.fromARGB(255, 255, 255, 255),
             iconColor: Color.fromARGB(255, 255, 255, 255),
             leading: Icon(Icons.location_on,
                 color: Color.fromARGB(255, 105, 144, 235), size: 20),
-            trailing: Icon(
-              Icons.expand_more_outlined,
-              color: Color.fromARGB(255, 105, 144, 235),
-            ),
             title: Text(
               "Dirección",
               style: TextStyle(color: Color.fromARGB(255, 105, 144, 235)),
@@ -87,15 +81,11 @@ class FooterMobile extends StatelessWidget {
               ),
             ],
           ),
-          ExpansionTile(
+          CustomExpansionTile(
             textColor: Color.fromARGB(255, 255, 255, 255),
             iconColor: Color.fromARGB(255, 255, 255, 255),
             leading: Icon(Icons.mail,
                 color: Color.fromARGB(255, 105, 144, 235), size: 20),
-            trailing: Icon(
-              Icons.expand_more_outlined,
-              color: Color.fromARGB(255, 105, 144, 235),
-            ),
             title: Text(
               "Correo",
               style: TextStyle(color: Color.fromARGB(255, 105, 144, 235)),
