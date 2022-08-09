@@ -124,7 +124,7 @@ class FooterWeb extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(right: 60),
+                      margin: const EdgeInsets.only(right: 70),
                       child: Row(
                         children: const [
                           Icon(Icons.phone,
@@ -142,7 +142,7 @@ class FooterWeb extends StatelessWidget {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255),
-                                fontSize: 10)),
+                                fontSize: 12)),
                       ],
                     ),
                     Row(
@@ -160,7 +160,7 @@ class FooterWeb extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    margin: const EdgeInsets.only(right: 80),
+                    margin: const EdgeInsets.only(right: 100),
                     child: Row(
                       children: const [
                         Icon(Icons.location_on,
@@ -182,7 +182,7 @@ class FooterWeb extends StatelessWidget {
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 10)),
+                              fontSize: 12)),
                     ],
                   ),
                 ],
@@ -190,7 +190,7 @@ class FooterWeb extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    margin: const EdgeInsets.only(right: 120),
+                    margin: const EdgeInsets.only(right: 150),
                     child: Row(
                       children: const [
                         Icon(Icons.mail,
@@ -211,7 +211,7 @@ class FooterWeb extends StatelessWidget {
                           textAlign: TextAlign.end,
                           style: TextStyle(
                               color: Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 10)),
+                              fontSize: 12)),
                     ],
                   ),
                 ],
