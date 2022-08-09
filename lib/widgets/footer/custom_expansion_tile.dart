@@ -403,7 +403,7 @@ class _ExpansionTileState extends State<CustomExpansionTile>
     final ExpansionTileThemeData expansionTileTheme =
         ExpansionTileTheme.of(context);
     final ColorScheme colorScheme = theme.colorScheme;
-    _borderColorTween.end = theme.dividerColor;
+    _borderColorTween.end = Color.fromARGB(130, 73, 96, 152);
     _headerColorTween
       ..begin = widget.collapsedTextColor ??
           expansionTileTheme.collapsedTextColor ??
