@@ -104,34 +104,37 @@ class _InvitadoPageState extends State<InvitadoPage> {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Column(
-                    children: [
-                      Column(
-                        children: [
-                          const Text("Lorem Ipsum..."),
-                          SizedBox(
-                            height: SizeConfig.blockSizeVertical!,
-                          ),
-                          const Text(
-                              "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
-                        ],
-                      ),
-                      SizedBox(
-                        height: SizeConfig.blockSizeVertical! * 3,
-                      ),
-                      Column(
-                        children: [
-                          const Text("Lorem Ipsum..."),
-                          SizedBox(
-                            height: SizeConfig.blockSizeVertical!,
-                          ),
-                          const Text(
-                              "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
-                        ],
-                      ),
-                      if (Responsive.isMobile(context))
-                        const Icon(Icons.image, size: 60)
-                    ],
+                  Padding(
+                    padding: EdgeInsets.only(top: 30, bottom: 30),
+                    child: Column(
+                      children: [
+                        Column(
+                          children: [
+                            const Text("Lorem Ipsum..."),
+                            SizedBox(
+                              height: SizeConfig.blockSizeVertical!,
+                            ),
+                            const Text(
+                                "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
+                          ],
+                        ),
+                        SizedBox(
+                          height: SizeConfig.blockSizeVertical! * 3,
+                        ),
+                        Column(
+                          children: [
+                            const Text("Lorem Ipsum..."),
+                            SizedBox(
+                              height: SizeConfig.blockSizeVertical!,
+                            ),
+                            const Text(
+                                "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
+                          ],
+                        ),
+                        if (Responsive.isMobile(context))
+                          const Icon(Icons.image, size: 60)
+                      ],
+                    ),
                   ),
                   if (Responsive.isDesktop(context) ||
                       Responsive.isTablet(context))
