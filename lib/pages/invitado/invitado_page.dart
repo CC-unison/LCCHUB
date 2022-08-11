@@ -102,7 +102,7 @@ class _InvitadoPageState extends State<InvitadoPage> {
             width: double.infinity,
             color: const Color.fromARGB(255, 255, 255, 255),
             child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Padding(
                     padding: EdgeInsets.only(top: 30, bottom: 30),
@@ -132,13 +132,20 @@ class _InvitadoPageState extends State<InvitadoPage> {
                           ],
                         ),
                         if (Responsive.isMobile(context))
-                          const Icon(Icons.image, size: 60)
+                          SizedBox(
+                            height: 500,
+                            width: 500,
+                            child: Image.asset("images/picture00.jpg"),
+                          ),
                       ],
                     ),
                   ),
                   if (Responsive.isDesktop(context) ||
                       Responsive.isTablet(context))
-                    const Icon(Icons.image, size: 120)
+                    Image.asset(
+                      "images/picture00.jpg",
+                      height: 400,
+                    ),
                 ]),
           ),
           Footer(),
