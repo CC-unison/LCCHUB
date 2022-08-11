@@ -101,56 +101,53 @@ class _InvitadoPageState extends State<InvitadoPage> {
           Container(
             width: double.infinity,
             color: const Color.fromARGB(255, 255, 255, 255),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 30, bottom: 30),
-                    child: Column(
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Padding(
+                padding: EdgeInsets.only(top: 30, bottom: 30),
+                child: Column(
+                  children: [
+                    Column(
                       children: [
-                        Column(
-                          children: [
-                            const Text("Lorem Ipsum..."),
-                            SizedBox(
-                              height: SizeConfig.blockSizeVertical!,
-                            ),
-                            const Text(
-                                "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
-                          ],
-                        ),
+                        const Text("Lorem Ipsum..."),
                         SizedBox(
-                          height: SizeConfig.blockSizeVertical! * 3,
+                          height: SizeConfig.blockSizeVertical!,
                         ),
-                        Column(
-                          children: [
-                            const Text("Lorem Ipsum..."),
-                            SizedBox(
-                              height: SizeConfig.blockSizeVertical!,
-                            ),
-                            const Text(
-                                "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
-                          ],
-                        ),
-                        if (Responsive.isMobile(context))
-                          SizedBox(
-                            height: 500,
-                            width: 500,
-                            child: Image.asset("images/picture00.jpg"),
-                          ),
+                        const Text(
+                            "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
                       ],
                     ),
-                  ),
-                  if (Responsive.isDesktop(context) ||
-                      Responsive.isTablet(context))
-                    Align(
-                      child: Expanded(
-                        child: Image.asset(
-                          "images/picture00.jpg",
-                          height: 350,
-                        ),
-                      ),
+                    SizedBox(
+                      height: SizeConfig.blockSizeVertical! * 3,
                     ),
-                ]),
+                    Column(
+                      children: [
+                        const Text("Lorem Ipsum..."),
+                        SizedBox(
+                          height: SizeConfig.blockSizeVertical!,
+                        ),
+                        const Text(
+                            "Lorem Ipsum is simply dummy text of the\n printing and typesetting industry.\nLorem Ipsum "),
+                      ],
+                    ),
+                    if (Responsive.isMobile(context))
+                      SizedBox(
+                        height: 500,
+                        width: 500,
+                        child: Expanded(
+                            child: Image.asset("images/picture00.jpg")),
+                      ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: SizeConfig.blockSizeHorizontal! * 10,
+              ),
+              if (Responsive.isDesktop(context) || Responsive.isTablet(context))
+                SizedBox(
+                  height: 350,
+                  child: Image.asset("images/picture00.jpg"),
+                ),
+            ]),
           ),
           Footer(),
         ]),
