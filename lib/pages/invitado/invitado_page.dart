@@ -142,9 +142,13 @@ class _InvitadoPageState extends State<InvitadoPage> {
                   ),
                   if (Responsive.isDesktop(context) ||
                       Responsive.isTablet(context))
-                    Image.asset(
-                      "images/picture00.jpg",
-                      height: 400,
+                    Align(
+                      child: Expanded(
+                        child: Image.asset(
+                          "images/picture00.jpg",
+                          height: 350,
+                        ),
+                      ),
                     ),
                 ]),
           ),
