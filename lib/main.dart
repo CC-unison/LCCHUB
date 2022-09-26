@@ -1,11 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:lcchub/pages/login/login.dart';
 import 'package:lcchub/pages/login/login_page.dart';
 import 'package:lcchub/responsive/responsive_layout.dart';
-//import 'package:lcchub/pages/login/login_page.dart';
+import 'package:lcchub/style/colors.dart';
+import 'package:lcchub/views/homepage/homepage.dart';
+import 'package:lcchub/views/splashScreen.dart';
 
-void main() {
+import 'config/firebase_options.dart';
+
+void main() async {
   runApp(const MyApp());
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 }
 
 final navigatorKey = GlobalKey<NavigatorState>();
@@ -17,14 +25,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "LCC-Hub",
+      //theme color
+      theme: ThemeData(
+        colorScheme:
+            ColorScheme.fromSwatch().copyWith(primary: AppColors.barBg),
+      ),
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(
-        body: ResponsiveLayout(
-          mobilBody: Login(),
-          webBody: LoginPage(),
-        ),
-      ),
+      home: const Scaffold(body: SplashScreen()),
     );
   }
 }
