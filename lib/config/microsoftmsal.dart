@@ -5,9 +5,11 @@ import 'package:aad_oauth/model/config.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lcchub/main.dart';
-import 'package:lcchub/widgets/text_styles/primary_texts.dart';
 import 'package:aad_oauth/aad_oauth.dart';
 import 'package:http/http.dart' as http;
+
+//import shared_preferences
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginMicrosoft {
   //constructor recibe context
@@ -62,7 +64,7 @@ class LoginMicrosoft {
         Uri.parse('https://graph.microsoft.com/v1.0/me'),
         headers: {HttpHeaders.authorizationHeader: "Bearer $accessToken"});
     final user = jsonDecode(graphResponse.body);
-    return {
+    Map<String, dynamic> data = {
       'status': 'success',
       'accessToken': accessToken,
       'name': user['displayName'],
@@ -70,14 +72,26 @@ class LoginMicrosoft {
       'matricula': user['jobTitle'] == "Alumno"
           ? user['jobTitle'].toString().split("@")[0]
           : "error",
-      
     };
+
+    //save access token in local storage with shared preferences
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString('accessToken', accessToken);
+    prefs.setString('name', user['displayName']);
+
+    //await storage.write(key: 'accessToken', value: accessToken);
+
+    return data;
 
     //  showMessage(
     //    'Hola ${user['displayName']}, has iniciado sesión correctamente con tu correo: ${user['mail']}');
   }
 
   void logout() async {
+    //delete access token in local storage with shared preferences
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.remove('accessToken');
+    prefs.remove('name');
     await oauth.logout();
     showMessage('¡Nos vemos pronto!');
   }

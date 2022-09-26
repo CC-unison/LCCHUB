@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lcchub/config/microsoftmsal.dart';
 import 'package:lcchub/style/colors.dart';
+import 'package:lcchub/views/homepage/homepage.dart';
 import 'package:lcchub/views/student/studentDashboard.dart';
 
 import '../../helpers/sizeconfig.dart';
@@ -110,7 +111,12 @@ class _LoginAuthState extends State<LoginAuth> {
                                       foregroundColor: AppColors.barBg,
                                     ),
                                     onPressed: () {
-                                      Navigator.pop(context);
+                                      Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const HomePage()),
+                                          (route) => false);
                                     },
                                     child: Text("Continuar como invitado")),
                               ),

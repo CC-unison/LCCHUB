@@ -1,7 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:lcchub/pages/login/login.dart';
-import 'package:lcchub/pages/login/login_page.dart';
 import 'package:lcchub/responsive/responsive_layout.dart';
 import 'package:lcchub/style/colors.dart';
 import 'package:lcchub/views/homepage/homepage.dart';
