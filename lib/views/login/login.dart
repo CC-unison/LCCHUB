@@ -88,6 +88,7 @@ class _LoginAuthState extends State<LoginAuth> {
                                       Map<String, dynamic> alumno =
                                           await logininstance.login();
                                       if (alumno['status'] == 'success') {
+                                        // ignore: use_build_context_synchronously
                                         Navigator.pushReplacement(
                                             context,
                                             MaterialPageRoute(
@@ -96,7 +97,10 @@ class _LoginAuthState extends State<LoginAuth> {
                                                     const StudentHomePage()));
                                       }
                                     },
-                                    child: Text("Iniciar sesión")),
+                                    child: Text(
+                                      "Iniciar sesión",
+                                      style: GoogleFonts.roboto(),
+                                    )),
                               ),
                               SizedBox(
                                 height: 10,
@@ -118,7 +122,10 @@ class _LoginAuthState extends State<LoginAuth> {
                                                   const HomePage()),
                                           (route) => false);
                                     },
-                                    child: Text("Continuar como invitado")),
+                                    child: Text(
+                                      "Continuar como invitado",
+                                      style: GoogleFonts.roboto(),
+                                    )),
                               ),
                             ],
                           ),
