@@ -5,7 +5,7 @@ class AdminModel {
   final String nombre;
   final String correo;
   final String password;
-  final Date fecha_Creacion; 
+  final DateTime fecha_Creacion; 
 
   AdminModel({
     required this.id_admin,
@@ -21,7 +21,7 @@ class AdminModel {
     nombre: map['nombre'] as String,
     correo: map['correo'] as String,
     password: map['password'] as String,
-    fecha_Creacion: map['fecha_Creacion'] as Date,
+    fecha_Creacion: map['fecha_Creacion'] as DateTime,
   );
 
     //alumno to map
